@@ -2,34 +2,38 @@
 
     // INGRESO DATOS DEL USUARIO
 
-    let nombreEstudiante = prompt('Ingrese su Nombre', 'Pablo Fuenzalida')
-    let nombreCarrera = prompt('Ingrese su Carrera', 'Desarrollo Web')
+    let nombreEstudiante = prompt('Ingrese su Nombre:', 'Pablo Fuenzalida')
+    let nombreCarrera = prompt('Ingrese su Carrera:', 'Desarrollo Web')
 
     // INGRESO NOTAS HTML
 
-    let ramoHTML = prompt('Ingrese Ramo', 'HTML')
-    let nota1HTML = prompt('Ingrese Nota 1 HTML', 7)
-    let nota2HTML = prompt('Ingrese Nota 2 HTML', 7)
-    let nota3HTML = prompt('Ingrese Nota 3 HTML', 7)
+    let ramoHTML = prompt('Ingrese Ramo:', 'HTML')
+    let nota1HTML = prompt('Ingrese Nota 1 HTML:', 7)
+    let nota2HTML = prompt('Ingrese Nota 2 HTML:', 7)
+    let nota3HTML = prompt('Ingrese Nota 3 HTML:', 7)
     let promedioHTML = ((parseFloat(nota1HTML))+(parseFloat(nota2HTML))+(parseFloat(nota3HTML)))/3;
 
     // INGRESO NOTAS CSS
 
-    let ramoCSS = prompt('Ingrese Ramo', 'CSS')
-    let nota1CSS = prompt('Ingrese Nota 1 CSS', 7)
-    let nota2CSS = prompt('Ingrese Nota 2 CSS', 7)
-    let nota3CSS = prompt('Ingrese Nota 3 CSS', 7)
+    let ramoCSS = prompt('Ingrese Ramo:', 'CSS')
+    let nota1CSS = prompt('Ingrese Nota 1 CSS:', 7)
+    let nota2CSS = prompt('Ingrese Nota 2 CSS:', 7)
+    let nota3CSS = prompt('Ingrese Nota 3 CSS:', 7)
     let promedioCSS = ((parseFloat(nota1CSS))+(parseFloat(nota2CSS))+(parseFloat(nota3CSS)))/3;
 
 
     // INGRESO NOTAS JavaScript
 
-    let ramoJavaScript = prompt('Ingrese Ramo', 'JavaScript')
-    let nota1JavaScript = prompt('Ingrese Nota 1 JavaScript', 7)
-    let nota2JavaScript = prompt('Ingrese Nota 2 JavaScript', 7)
-    let promedioJavaScript = ((parseFloat(nota1JavaScript))+(parseFloat(nota2JavaScript)))/3;
+    let ramoJavaScript = prompt('Ingrese Ramo:', 'JavaScript')
+    let nota1JavaScript = prompt('Ingrese Nota 1 JavaScript:', 7)
+    let nota2JavaScript = prompt('Ingrese Nota 2 JavaScript:', 7)
     
+    let valorTotal = 4 * 3  
+    // -----> VALOR 4 = nota minima de aprobación * VALOR 3 = Cantidad notas totales
 
+    let sumaParcial = ((parseFloat(nota1JavaScript))+(parseFloat(nota2JavaScript)))
+    
+    let minimaJavaScript = valorTotal - sumaParcial
 
     // PLANTILLA HTML A JAVASCRIPT
     
@@ -99,7 +103,7 @@
                     </tr>
                     
                     <tr>
-                        <td>Para aprobar el ramo JavaScript con nota 4, necesitas obtener un ${promedioJavaScript} en la nota 3</td>
+                        <td>Para aprobar el ramo JavaScript con nota 4, necesitas obtener un ${minimaJavaScript} en la nota 3</td>
                     </tr>
                     </tbody>
 
